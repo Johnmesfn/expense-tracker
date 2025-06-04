@@ -1,0 +1,116 @@
+:root {
+  --primary-color: #3498db;
+  --error-color: #e74c3c;
+  --success-color: #2ecc71;
+  --text-color: #333;
+  --background-color: #fff;
+  --border-color: #ddd;
+}
+
+/* Container */
+.expense-form-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1.5rem 2.5rem;
+  background: var(--background-color);
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-color);
+  user-select: none;
+}
+
+.expense-form-container h2 {
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: var(--primary-color);
+}
+
+/* Form group wrapper */
+.form-group {
+  margin-bottom: 1.2rem;
+  position: relative;
+}
+
+/* Inputs and selects */
+.expense-form input,
+.expense-form select {
+  display: block;
+  width: 100%;
+  padding: 0.65rem 1rem;
+  font-size: 1.05rem;
+  border-radius: 8px;
+  border: 1.8px solid var(--border-color);
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.expense-form input:focus,
+.expense-form select:focus {
+  border-color: var(--primary-color);
+  outline: none;
+  background-color: #f0f8ff;
+}
+
+/* Button */
+.expense-form button {
+  display: block;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.25s ease;
+  user-select: none;
+}
+
+.expense-form button:hover,
+.expense-form button:focus {
+  background-color: #217dbb;
+  outline: none;
+}
+
+/* Error message styling */
+.error-msg {
+  color: var(--error-color);
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+  user-select: none;
+  position: absolute;
+  left: 1rem;
+  bottom: -1.25rem;
+}
+
+/* Confirmation & error message below form */
+.message {
+  text-align: center;
+  font-weight: 600;
+  margin-top: 1rem;
+  user-select: none;
+}
+
+.message.success {
+  color: var(--success-color);
+}
+
+.message.error {
+  color: var(--error-color);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .expense-form-container {
+    padding: 1rem 1.5rem;
+  }
+
+  .expense-form input,
+  .expense-form select,
+  .expense-form button {
+    font-size: 1rem;
+  }
+}

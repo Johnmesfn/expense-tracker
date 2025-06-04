@@ -1,0 +1,212 @@
+/* Root colors for consistency with dashboard */
+:root {
+  --primary-color: #3498db;
+  --text-color: #333;
+  --heading-color: #222;
+  --background-color: #fff;
+  --border-color: #ddd;
+}
+
+/* Container */
+.expense-list-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  background: var(--background-color);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-color);
+  user-select: none;
+}
+
+.expense-list-container h2 {
+  color: var(--heading-color);
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Filter */
+.filter-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  user-select: none;
+}
+
+#categoryFilter {
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1.5px solid var(--border-color);
+  background-color: var(--background-color);
+  cursor: pointer;
+  transition: border-color 0.25s ease;
+}
+
+#categoryFilter:hover,
+#categoryFilter:focus {
+  border-color: var(--primary-color);
+  outline: none;
+}
+
+/* Table styling */
+.expense-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1rem;
+}
+
+.expense-table th,
+.expense-table td {
+  border: 1px solid var(--border-color);
+  padding: 0.75rem 1rem;
+  text-align: left;
+}
+
+.expense-table th {
+  background-color: #f9fafb;
+  font-weight: 700;
+  color: var(--primary-color);
+  user-select: none;
+}
+
+.expense-table tbody tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+/* Category Badge */
+.category-badge {
+  border-radius: 10px;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: inline-block;
+  user-select: none;
+}
+
+/* Delete button */
+.delete-btn {
+  padding: 0.4rem 0.85rem;
+  color: white;
+  background-color: #e74c3c;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.25s ease;
+  user-select: none;
+}
+
+.delete-btn:hover,
+.delete-btn:focus {
+  background-color: #c0392b;
+  outline: none;
+}
+
+/* Modal backdrop */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(30, 30, 30, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal container */
+.modal-container {
+  background-color: var(--background-color);
+  padding: 1.8rem 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-color);
+  user-select: none;
+}
+
+/* Modal message */
+.modal-container p {
+  font-size: 1.2rem;
+  margin-bottom: 1.8rem;
+  font-weight: 600;
+  color: var(--heading-color);
+}
+
+/* Modal buttons container */
+.modal-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+}
+
+/* Buttons base */
+.btn {
+  padding: 0.5rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+
+/* Cancel button */
+.btn-cancel {
+  background-color: #ccc;
+  color: #333;
+}
+
+.btn-cancel:hover,
+.btn-cancel:focus {
+  background-color: #b3b3b3;
+  outline: none;
+}
+
+/* Confirm button */
+.btn-confirm {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.btn-confirm:hover,
+.btn-confirm:focus {
+  background-color: #217dbb;
+  outline: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .expense-list-container {
+    padding: 1rem 1rem;
+  }
+
+  .expense-table th,
+  .expense-table td {
+    padding: 0.5rem 0.7rem;
+    font-size: 0.9rem;
+  }
+
+  .delete-btn {
+    font-size: 0.85rem;
+    padding: 0.3rem 0.65rem;
+  }
+
+  .category-badge {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.5rem;
+  }
+}

@@ -1,0 +1,345 @@
+[
+    {
+        "id": 1749027481,
+        "title": "test2",
+        "amount": 45.5,
+        "category": "Transport",
+        "date": "2025-02-08"
+    },
+    {
+        "id": 1749027482,
+        "title": "test3",
+        "amount": 67.89,
+        "category": "Entertainment",
+        "date": "2025-03-22"
+    },
+    {
+        "id": 1749027483,
+        "title": "test4",
+        "amount": 12.0,
+        "category": "Groceries",
+        "date": "2025-04-05"
+    },
+    {
+        "id": 1749027484,
+        "title": "test5",
+        "amount": 250.0,
+        "category": "Bills",
+        "date": "2025-05-17"
+    },
+    {
+        "id": 1749027485,
+        "title": "test6",
+        "amount": 89.99,
+        "category": "Food",
+        "date": "2025-06-01"
+    },
+    {
+        "id": 1749027486,
+        "title": "test7",
+        "amount": 40.0,
+        "category": "Transport",
+        "date": "2025-01-28"
+    },
+    {
+        "id": 1749027487,
+        "title": "test8",
+        "amount": 150.75,
+        "category": "Entertainment",
+        "date": "2025-02-12"
+    },
+    {
+        "id": 1749027488,
+        "title": "test9",
+        "amount": 75.0,
+        "category": "Groceries",
+        "date": "2025-03-30"
+    },
+    {
+        "id": 1749027489,
+        "title": "test10",
+        "amount": 95.5,
+        "category": "Bills",
+        "date": "2025-04-10"
+    },
+    {
+        "id": 1749027490,
+        "title": "test11",
+        "amount": 123.0,
+        "category": "Food",
+        "date": "2025-05-25"
+    },
+    {
+        "id": 1749027491,
+        "title": "test12",
+        "amount": 20.0,
+        "category": "Transport",
+        "date": "2025-06-08"
+    },
+    {
+        "id": 1749027492,
+        "title": "test13",
+        "amount": 54.25,
+        "category": "Entertainment",
+        "date": "2025-01-19"
+    },
+    {
+        "id": 1749027493,
+        "title": "test14",
+        "amount": 100.0,
+        "category": "Groceries",
+        "date": "2025-02-27"
+    },
+    {
+        "id": 1749027494,
+        "title": "test15",
+        "amount": 60.0,
+        "category": "Bills",
+        "date": "2025-03-14"
+    },
+    {
+        "id": 1749027495,
+        "title": "test16",
+        "amount": 80.0,
+        "category": "Food",
+        "date": "2025-04-23"
+    },
+    {
+        "id": 1749027496,
+        "title": "test17",
+        "amount": 23.0,
+        "category": "Transport",
+        "date": "2025-05-11"
+    },
+    {
+        "id": 1749027497,
+        "title": "test18",
+        "amount": 110.0,
+        "category": "Entertainment",
+        "date": "2025-06-18"
+    },
+    {
+        "id": 1749027498,
+        "title": "test19",
+        "amount": 75.5,
+        "category": "Groceries",
+        "date": "2025-01-04"
+    },
+    {
+        "id": 1749027499,
+        "title": "test20",
+        "amount": 90.0,
+        "category": "Bills",
+        "date": "2025-02-20"
+    },
+    {
+        "id": 1749027500,
+        "title": "test21",
+        "amount": 130.0,
+        "category": "Food",
+        "date": "2025-03-05"
+    },
+    {
+        "id": 1749027501,
+        "title": "test22",
+        "amount": 50.0,
+        "category": "Transport",
+        "date": "2025-04-15"
+    },
+    {
+        "id": 1749027502,
+        "title": "test23",
+        "amount": 99.99,
+        "category": "Entertainment",
+        "date": "2025-05-07"
+    },
+    {
+        "id": 1749027503,
+        "title": "test24",
+        "amount": 88.0,
+        "category": "Groceries",
+        "date": "2025-06-25"
+    },
+    {
+        "id": 1749027504,
+        "title": "test25",
+        "amount": 72.0,
+        "category": "Bills",
+        "date": "2025-01-21"
+    },
+    {
+        "id": 1749027505,
+        "title": "test26",
+        "amount": 115.0,
+        "category": "Food",
+        "date": "2025-02-03"
+    },
+    {
+        "id": 1749027506,
+        "title": "test27",
+        "amount": 35.0,
+        "category": "Transport",
+        "date": "2025-03-19"
+    },
+    {
+        "id": 1749027507,
+        "title": "test28",
+        "amount": 140.0,
+        "category": "Entertainment",
+        "date": "2025-04-27"
+    },
+    {
+        "id": 1749027508,
+        "title": "test29",
+        "amount": 45.0,
+        "category": "Groceries",
+        "date": "2025-05-20"
+    },
+    {
+        "id": 1749027509,
+        "title": "test30",
+        "amount": 85.0,
+        "category": "Bills",
+        "date": "2025-06-11"
+    },
+    {
+        "id": 1749027510,
+        "title": "test31",
+        "amount": 60.0,
+        "category": "Food",
+        "date": "2025-01-13"
+    },
+    {
+        "id": 1749027511,
+        "title": "test32",
+        "amount": 25.0,
+        "category": "Transport",
+        "date": "2025-02-09"
+    },
+    {
+        "id": 1749027512,
+        "title": "test33",
+        "amount": 105.0,
+        "category": "Entertainment",
+        "date": "2025-03-28"
+    },
+    {
+        "id": 1749027513,
+        "title": "test34",
+        "amount": 70.0,
+        "category": "Groceries",
+        "date": "2025-04-02"
+    },
+    {
+        "id": 1749027514,
+        "title": "test35",
+        "amount": 95.0,
+        "category": "Bills",
+        "date": "2025-05-18"
+    },
+    {
+        "id": 1749027515,
+        "title": "test36",
+        "amount": 130.0,
+        "category": "Food",
+        "date": "2025-06-06"
+    },
+    {
+        "id": 1749027516,
+        "title": "test37",
+        "amount": 48.0,
+        "category": "Transport",
+        "date": "2025-01-29"
+    },
+    {
+        "id": 1749027517,
+        "title": "test38",
+        "amount": 77.0,
+        "category": "Entertainment",
+        "date": "2025-02-16"
+    },
+    {
+        "id": 1749027518,
+        "title": "test39",
+        "amount": 60.0,
+        "category": "Groceries",
+        "date": "2025-03-09"
+    },
+    {
+        "id": 1749027519,
+        "title": "test40",
+        "amount": 110.0,
+        "category": "Bills",
+        "date": "2025-04-24"
+    },
+    {
+        "id": 1749027520,
+        "title": "test41",
+        "amount": 120.0,
+        "category": "Food",
+        "date": "2025-05-13"
+    },
+    {
+        "id": 1749027521,
+        "title": "test42",
+        "amount": 30.0,
+        "category": "Transport",
+        "date": "2025-06-21"
+    },
+    {
+        "id": 1749027522,
+        "title": "test43",
+        "amount": 90.0,
+        "category": "Entertainment",
+        "date": "2025-01-07"
+    },
+    {
+        "id": 1749027523,
+        "title": "test44",
+        "amount": 65.0,
+        "category": "Groceries",
+        "date": "2025-02-25"
+    },
+    {
+        "id": 1749027524,
+        "title": "test45",
+        "amount": 85.0,
+        "category": "Bills",
+        "date": "2025-03-17"
+    },
+    {
+        "id": 1749027525,
+        "title": "test46",
+        "amount": 135.0,
+        "category": "Food",
+        "date": "2025-04-08"
+    },
+    {
+        "id": 1749027526,
+        "title": "test47",
+        "amount": 55.0,
+        "category": "Transport",
+        "date": "2025-05-22"
+    },
+    {
+        "id": 1749027527,
+        "title": "test48",
+        "amount": 100.0,
+        "category": "Entertainment",
+        "date": "2025-06-03"
+    },
+    {
+        "id": 1749027528,
+        "title": "test49",
+        "amount": 80.0,
+        "category": "Groceries",
+        "date": "2025-01-31"
+    },
+    {
+        "id": 1749030510,
+        "title": "12",
+        "amount": 12.0,
+        "category": "Food",
+        "date": "2025-06-04"
+    }
+]

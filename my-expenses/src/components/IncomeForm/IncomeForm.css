@@ -118,7 +118,7 @@
   background-color: var(--hover-bg-color);
 }
 
-/* Main button */
+/* Main submit button */
 .expense-form button[type="submit"] {
   display: block;
   width: 100%;
@@ -144,7 +144,7 @@
   transform: scale(0.97);
 }
 
-/* File input (hidden) */
+/* Hide native file input */
 .expense-form input[type="file"] {
   display: none;
 }

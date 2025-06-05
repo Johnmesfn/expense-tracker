@@ -14,6 +14,12 @@ const Navbar = () => {
       <NavLink to="/expenses" className={({ isActive }) => (isActive ? 'active-link' : '')}>
         Expense List
       </NavLink>
+      <NavLink to="/add-income" className={({ isActive }) => (isActive ? 'active-link' : '')}>
+        Add Income
+      </NavLink>
+      <NavLink to="/incomes" className={({ isActive }) => (isActive ? 'active-link' : '')}>
+        Income List
+      </NavLink>
     </nav>
   );
 };

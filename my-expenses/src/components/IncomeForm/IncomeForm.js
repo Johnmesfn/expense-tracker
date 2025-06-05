@@ -1,42 +1,34 @@
 import React, { useState, useRef } from 'react';
-import { addExpense } from '../../api/expenses';
 import * as XLSX from 'xlsx';
-import './ExpenseForm.css';
-import { FaFileImport } from 'react-icons/fa'; // Import icon
+import { FaFileImport } from 'react-icons/fa'; // Use same icon style as ExpenseForm
 
-const ExpenseForm = () => {
+const IncomeForm = () => {
   const [formData, setFormData] = useState({
-    title: '',
+    source: '',
     amount: '',
     date: '',
-    category: '',
   });
-
   const [errors, setErrors] = useState({});
-  const [message, setMessage] = useState('');
+  const [message, setMessage] = useState(null);
   const [fileData, setFileData] = useState(null);
-  const categories = ['Food', 'Transportation', 'Entertainment', 'Health', 'Utilities', 'Others'];
 
   const fileInputRef = useRef(null);
 
   const validate = () => {
     const newErrors = {};
-
-    if (!formData.title.trim()) newErrors.title = 'Title is required';
+    if (!formData.source.trim()) newErrors.source = 'Source is required';
     if (!formData.amount) newErrors.amount = 'Amount is required';
     else if (isNaN(formData.amount) || parseFloat(formData.amount) <= 0)
       newErrors.amount = 'Amount must be a positive number';
     if (!formData.date) newErrors.date = 'Date is required';
-    if (!formData.category) newErrors.category = 'Category is required';
-
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
 
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-    setErrors({ ...errors, [e.target.name]: '' });
-    setMessage('');
+    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+    setErrors((prev) => ({ ...prev, [e.target.name]: '' }));
+    setMessage(null);
   };
 
   const handleSubmit = async (e) => {
@@ -44,19 +36,29 @@ const ExpenseForm = () => {
     if (!validate()) return;
 
     try {
-      await addExpense({
-        ...formData,
-        amount: parseFloat(formData.amount),
+      const res = await fetch('http://localhost:5000/incomes', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          source: formData.source,
+          amount: parseFloat(formData.amount),
+          date: formData.date,
+        }),
       });
-      setMessage({ type: 'success', text: '✅ Expense added successfully!' });
-      setFormData({ title: '', amount: '', date: '', category: '' });
+
+      if (!res.ok) {
+        const errorData = await res.json();
+        throw new Error(errorData.error || 'Failed to add income.');
+      }
+
+      setMessage({ type: 'success', text: '✅ Income added successfully!' });
+      setFormData({ source: '', amount: '', date: '' });
       setErrors({});
-    } catch (err) {
-      console.error(err);
-      setMessage({ type: 'error', text: '❌ Failed to add expense. Please try again.' });
+    } catch (error) {
+      setMessage({ type: 'error', text: '❌ ' + error.message });
     }
 
-    setTimeout(() => setMessage(''), 4000);
+    setTimeout(() => setMessage(null), 4000);
   };
 
   const triggerFileSelect = () => {
@@ -75,37 +77,40 @@ const ExpenseForm = () => {
       const jsonData = XLSX.utils.sheet_to_json(worksheet);
 
       setFileData(jsonData);
-      bulkImportExpenses(jsonData);
+      bulkImportIncomes(jsonData);
     };
     reader.readAsBinaryString(file);
   };
 
-  const bulkImportExpenses = async (data) => {
+  const bulkImportIncomes = async (data) => {
     try {
       for (const row of data) {
-        if (!row.title || !row.amount || !row.date || !row.category) {
-          setMessage({ type: 'error', text: 'Invalid data. Required columns: title, amount, date, category' });
+        if (!row.source || !row.amount || !row.date) {
+          setMessage({ type: 'error', text: 'Invalid data. Columns required: source, amount, date' });
           return;
         }
-        await addExpense({
-          title: row.title,
-          amount: parseFloat(row.amount),
-          date: row.date,
-          category: row.category,
+        await fetch('http://localhost:5000/incomes', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            source: row.source,
+            amount: parseFloat(row.amount),
+            date: row.date,
+          }),
         });
       }
-      setMessage({ type: 'success', text: '✅ Bulk expenses imported successfully!' });
+      setMessage({ type: 'success', text: '✅ Bulk incomes imported successfully!' });
     } catch (error) {
       setMessage({ type: 'error', text: '❌ Bulk import failed: ' + error.message });
     }
 
-    setTimeout(() => setMessage(''), 5000);
+    setTimeout(() => setMessage(null), 5000);
   };
 
   return (
     <div className="expense-form-container">
 
-      {/* Custom Import Button */}
+      {/* Import button matching expense form */}
       <button type="button" className="import-btn" onClick={triggerFileSelect}>
         <FaFileImport style={{ marginRight: '8px' }} />
         Import from Excel / CSV
@@ -118,19 +123,19 @@ const ExpenseForm = () => {
         style={{ display: 'none' }}
       />
 
-      <h2>Add New Expense</h2>
+      <h2>Add Income</h2>
 
       <form onSubmit={handleSubmit} className="expense-form" noValidate>
         <div className="form-group">
           <input
             type="text"
-            name="title"
-            placeholder="Expense Title"
-            value={formData.title}
+            name="source"
+            placeholder="Income Source"
+            value={formData.source}
             onChange={handleChange}
             autoComplete="off"
           />
-          {errors.title && <small className="error-msg">{errors.title}</small>}
+          {errors.source && <small className="error-msg">{errors.source}</small>}
         </div>
 
         <div className="form-group">
@@ -156,23 +161,7 @@ const ExpenseForm = () => {
           {errors.date && <small className="error-msg">{errors.date}</small>}
         </div>
 
-        <div className="form-group">
-          <select
-            name="category"
-            value={formData.category}
-            onChange={handleChange}
-          >
-            <option value="">Select Category</option>
-            {categories.map((cat) => (
-              <option key={cat} value={cat}>
-                {cat}
-              </option>
-            ))}
-          </select>
-          {errors.category && <small className="error-msg">{errors.category}</small>}
-        </div>
-
-        <button type="submit">Add Expense</button>
+        <button type="submit">Add Income</button>
       </form>
 
       {message && (
@@ -193,4 +182,4 @@ const ExpenseForm = () => {
   );
 };
 
-export default ExpenseForm;
+export default IncomeForm;

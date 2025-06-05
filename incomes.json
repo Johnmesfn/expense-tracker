@@ -1,0 +1,170 @@
+[
+    {
+        "id": 2000002,
+        "source": "Freelance",
+        "amount": 450.0,
+        "date": "2019-11-17"
+    },
+    {
+        "id": 2000003,
+        "source": "Investment",
+        "amount": 120.0,
+        "date": "2020-03-05"
+    },
+    {
+        "id": 2000004,
+        "source": "Gift",
+        "amount": 200.0,
+        "date": "2021-07-20"
+    },
+    {
+        "id": 2000005,
+        "source": "Other",
+        "amount": 100.0,
+        "date": "2022-12-12"
+    },
+    {
+        "id": 2000006,
+        "source": "Salary",
+        "amount": 2500.0,
+        "date": "2019-05-03"
+    },
+    {
+        "id": 2000007,
+        "source": "Freelance",
+        "amount": 350.0,
+        "date": "2020-06-25"
+    },
+    {
+        "id": 2000008,
+        "source": "Investment",
+        "amount": 130.0,
+        "date": "2021-09-08"
+    },
+    {
+        "id": 2000009,
+        "source": "Gift",
+        "amount": 250.0,
+        "date": "2023-01-30"
+    },
+    {
+        "id": 2000010,
+        "source": "Other",
+        "amount": 50.0,
+        "date": "2024-02-18"
+    },
+    {
+        "id": 2000011,
+        "source": "Salary",
+        "amount": 2600.0,
+        "date": "2020-11-05"
+    },
+    {
+        "id": 2000012,
+        "source": "Freelance",
+        "amount": 500.0,
+        "date": "2021-03-14"
+    },
+    {
+        "id": 2000013,
+        "source": "Investment",
+        "amount": 100.0,
+        "date": "2022-08-29"
+    },
+    {
+        "id": 2000014,
+        "source": "Gift",
+        "amount": 300.0,
+        "date": "2023-04-22"
+    },
+    {
+        "id": 2000015,
+        "source": "Other",
+        "amount": 80.0,
+        "date": "2019-07-10"
+    },
+    {
+        "id": 2000016,
+        "source": "Salary",
+        "amount": 2550.0,
+        "date": "2021-01-12"
+    },
+    {
+        "id": 2000017,
+        "source": "Freelance",
+        "amount": 400.0,
+        "date": "2022-05-18"
+    },
+    {
+        "id": 2000018,
+        "source": "Investment",
+        "amount": 140.0,
+        "date": "2023-07-06"
+    },
+    {
+        "id": 2000019,
+        "source": "Gift",
+        "amount": 180.0,
+        "date": "2024-03-15"
+    },
+    {
+        "id": 2000020,
+        "source": "Other",
+        "amount": 60.0,
+        "date": "2018-09-28"
+    },
+    {
+        "id": 2000021,
+        "source": "Salary",
+        "amount": 2700.0,
+        "date": "2022-11-11"
+    },
+    {
+        "id": 2000022,
+        "source": "Freelance",
+        "amount": 480.0,
+        "date": "2023-08-30"
+    },
+    {
+        "id": 2000023,
+        "source": "Investment",
+        "amount": 115.0,
+        "date": "2020-01-23"
+    },
+    {
+        "id": 2000024,
+        "source": "Gift",
+        "amount": 220.0,
+        "date": "2019-06-14"
+    },
+    {
+        "id": 2000025,
+        "source": "Other",
+        "amount": 90.0,
+        "date": "2021-10-19"
+    },
+    {
+        "id": 2000026,
+        "source": "Salary",
+        "amount": 2650.0,
+        "date": "2018-12-03"
+    },
+    {
+        "id": 2000027,
+        "source": "Freelance",
+        "amount": 375.0,
+        "date": "2020-09-12"
+    },
+    {
+        "id": 2000028,
+        "source": "Investment",
+        "amount": 125.0,
+        "date": "2021-04-27"
+    },
+    {
+        "id": 2000029,
+        "source": "Gift",
+        "amount": 210.0,
+        "date": "2022-02-09"
+    }
+]
